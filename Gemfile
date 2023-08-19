@@ -42,8 +42,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# making the errors look better
-gem 'better_errors', '~> 2.10', '>= 2.10.1'
+
 
 # bulma css
 gem 'bulma-rails', '~> 0.9.4'
@@ -76,7 +75,11 @@ group :development do
   gem 'guard', '~> 2.18'
 
 # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+    gem 'guard-livereload', '~> 2.5', require: false
+
+    # making the errors look better
+    gem 'better_errors', '~> 2.10', '>= 2.10.1'
+
 end
 
 group :test do
